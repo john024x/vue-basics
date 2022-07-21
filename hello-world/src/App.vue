@@ -1,22 +1,22 @@
 <template>
   <div>{{ name }}</div>
   <div v-html="channel"></div>
-  <h2 class="underline" v-bind:id="headingID">Heading</h2>
-  <h3 class ="underline" v-bind:class="success">Heading 3</h3>
-  <p v-bind:class="['underline', 'successClass']">New 3</p>
-  <p v-bind:class="isDisabled ? 'unsuccessClass' : 'successClass' ">New 4</p>
-  <h4 v-bind:class="{
+  <h2 class="underline" :id="headingID">Heading</h2>
+  <h3 class ="underline" :class="success">Heading 3</h3>
+  <p :class="['underline', 'successClass']">New 3</p>
+  <p :class="isDisabled ? 'unsuccessClass' : 'successClass' ">New 4</p>
+  <h4 :class="{
     'underline': true,
     'success': isDisabled,
     'unsuccess': !isDisabled
   }">New 5</h4>
-  <h2 v-bind:style="{
+  <h2 :style="{
     color: highlightColor,
     fontSize: headerSize + 'rem'
   }">
     Inline style
   </h2>
-  <button v-bind:disabled="isDisabled">Button</button>
+  <button :disabled="isDisabled">Button</button>
 </template>
 
 <script>
