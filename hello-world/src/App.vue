@@ -10,6 +10,12 @@
     'success': isDisabled,
     'unsuccess': !isDisabled
   }">New 5</h4>
+  <h2 v-bind:style="{
+    color: highlightColor,
+    fontSize: headerSize + 'rem'
+  }">
+    Inline style
+  </h2>
   <button v-bind:disabled="isDisabled">Button</button>
 </template>
 
@@ -24,7 +30,9 @@ export default {
       channel: '<span>Channel</span>',
       headingID: 'heading',
       isDisabled: false,
-      success: 'unsuccessClass'
+      success: 'unsuccessClass',
+      highlightColor: 'orange',
+      headerSize: '20'
     }
   },
   }
